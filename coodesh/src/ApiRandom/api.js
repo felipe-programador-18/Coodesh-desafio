@@ -1,8 +1,8 @@
 //create all things need to make search people!!!
 
-export const SearchUser = async(results) => {
+export const SearchUser = async() => {
     try {
-        let url = `https://randomuser.me/api/?${results}`
+        let url = `https://randomuser.me/api/?`
         const response = await fetch(url)
         return await response.json()
         
@@ -11,9 +11,9 @@ export const SearchUser = async(results) => {
     }
 }
 
-export const LimitSearch = async(results=50) => {
+export const LimitSearch = async(page=0,results=50) => {
    try {
-       let url = `https://randomuser.me/api/?${results}`
+       let url = `https://randomuser.me/api/?${page}=${results}`
        const response = await fetch(url)
        return await response.json()
    } catch (error) {
