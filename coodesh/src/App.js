@@ -3,14 +3,14 @@ import './App.css'
 
 function App() {
   
-  const ItensPorPage = 50
+ // const ItensPorPage = 50
   
   
   
   
   return (
     <div className="App">
-     <h1>teste para aprender e apanhar!!</h1>
+     <h1 className='bg-primary'>teste para aprender e apanhar!!</h1>
     </div>
   );
 }
