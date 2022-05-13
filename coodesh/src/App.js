@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './App.css'
+import NavBar from './Componentes/Navbar'
 
 function App() {
  const [page, setPage] = useState(0)
@@ -12,7 +13,7 @@ function App() {
   
   return (
     <div className="App">
-     <h1 className='bg-primary container'>teste para aprender e apanhar!!</h1>
+     <NavBar/>
     </div>
   );
 }
