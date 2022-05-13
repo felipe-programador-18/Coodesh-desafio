@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './App.css'
 import NavBar from './Componentes/Navbar'
+import User from './Componentes/User'
 
 function App() {
  const [page, setPage] = useState(0)
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
      <NavBar/>
+     
     </div>
   );
 }
