@@ -28,6 +28,15 @@ const Usersers = (props) =>{
            onLeftClick ={onLeftHandling}
            onRightClick = {onRightHandling} 
            />
+           {loading ? (<div>Carregando .....</div>) :
+            (<div className='' >
+                {pessoas && pessoas.map((results, index) => {
+                    return(
+                        <User key={index} results={results}/>
+                    )
+                })}
+            </div>  
+            )}
         </div>
         
         
