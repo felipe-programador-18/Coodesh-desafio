@@ -1,8 +1,13 @@
 .App {
   text-align: center;
 }
-
 .image-size{
   width: 70px;
   height: 70px;
+}
+
+.display-grid{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr)
 }
