@@ -29,7 +29,7 @@ const Usersers = (props) =>{
            onRightClick = {onRightHandling} 
            />
            {loading ? (<div>Carregando .....</div>) :
-            (<div className='' >
+            (<div className='display-grid' >
                 {pessoas && pessoas.map((results, index) => {
                     return(
                         <User key={index} results={results}/>
