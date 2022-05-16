@@ -15,6 +15,7 @@ const User = (props) => {
         <div className='container d-flex flex-row p-4 justify-content-between'>
             <div className='d-flex flex-row justify-content-between align-items-center'>
                 {results.gender}
+                {results.id}
                 {results.name}
                 {results.location}
                 {results.email}
