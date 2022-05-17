@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 const SearchBar = (props) => {
-   const {busca, setbusca} = useState('mr')
+   const [busca, setbusca] = useState("Mr")
    const {onSearch} = props
    
    const LidaOnchange = (e) => {
