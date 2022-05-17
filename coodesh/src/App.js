@@ -3,6 +3,7 @@ import { GetSearchApiData,SearchUser ,LimitSearch } from './ApiRandom/api'
 import './App.css'
 import NavBar from './Componentes/Navbar'
 import SearchBar from './Componentes/SearchBar'
+import Usersers from './Componentes/Usersers'
 import { ContextProvider } from './Context/context'
 
 const FavoritosUser = 'users'
@@ -89,7 +90,17 @@ function App() {
      }} >
     <div className="App">
      <NavBar/>
-     <SearchBar/>
+     <SearchBar onSearch= {onHandLoadUser} />
+      {found ? (<div className='container  bg-dark text-center'>Nenhum usuario encontrado!!</div>) :
+      (<Usersers 
+        pessoas={pessoas}
+        loading={loading}
+        page={page}
+        setPage = {setPage}
+        totalPage= {totalPage}
+
+       />)
+      }
     </div>
  </ContextProvider>);
 }
