@@ -23,7 +23,7 @@ const User = (props) => {
           
 
             <div className='d-flex flex-row align-items-center justify-content-between'>
-                <div className=''>
+                <div className='d-flex'>
                 {results.results.map((result, index) => {
                  return <div key={index}> {result.result.name} </div>
                 })}
