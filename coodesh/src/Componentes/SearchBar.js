@@ -2,17 +2,17 @@ import React,{useState} from 'react'
 
 const SearchBar = (props) => {
    const {busca, setbusca} = useState('mr')
-   const {onSerch} = props
+   const {onSearch} = props
    
    const LidaOnchange = (e) => {
        setbusca(e.target.value)
       if(e.target.value.lenght === 0 ){
-          onSerch(undefined)
+          onSearch(undefined)
       }
    }
 
    const LidaComBusca = () => {
-       onSerch(busca)
+       onSearch(busca)
    }
    
   
