@@ -3,12 +3,11 @@ import ContextManager from '../Context/context'
 
 const User = (props) => {
     const {allusers, updatingpeople} = useContext(ContextManager)
-    const results = props;
+    const {results} = props;
     
     const onHandlingLetter = () =>{
         // make some test inside here
         updatingpeople(results.name)
-        updatingpeople(results.email)
     }
     
     
@@ -30,7 +29,7 @@ const User = (props) => {
             <div className='d-flex flex-row align-items-center justify-content-between'>
                 <div className='d-flex'>
                 {results.name.map((names, index) => 
-                {return <div key={index}> {names.name.name} </div>
+                {return <div key={index} className='container'> {names.infos.name} </div>
                 })}
                 </div>
 
