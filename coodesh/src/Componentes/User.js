@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import ContextManager from '../Context/context' 
 
 const User = (props) => {
-   // const {allusers} = useContext(ContextManager)
+    const {allusers, updatingpeople} = useContext(ContextManager)
     const results = props
     const letter = "📃"
     
