@@ -26,7 +26,7 @@ export const GetSearchApiData = async (url) => {
        const response = await fetch(url)
        return await response.json()  
    } catch (error) {
-       console.log('error here,', error)
+       console.log('error here', error)
    }
 }
 
