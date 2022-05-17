@@ -11,9 +11,9 @@ export const SearchUser = async(results) => {
     }
 }
 
-export const LimitSearch = async(page=0 ,send,results=50) => {
+export const LimitSearch = async(page=0 ,seed,results=50) => {
    try {
-       let url = `https://randomuser.me/api/?page=?${page}=&results=${results}&${send}=`
+       let url = `https://randomuser.me/api/?page=?${page}=&results=${results}&${seed}=`
        const response = await fetch(url)
        return await response.json()
    } catch (error) {
