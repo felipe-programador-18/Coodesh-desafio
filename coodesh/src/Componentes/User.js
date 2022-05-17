@@ -21,15 +21,15 @@ const User = (props) => {
 
         <div className='container d-flex flex-row p-4 justify-content-between'>
             <div className='d-flex flex-row justify-content-between align-items-center'>
-                {results.gender}
-                
+                {results.name}
+                {results.id}
             </div>
           
 
             <div className='d-flex flex-row align-items-center justify-content-between'>
                 <div className='d-flex'>
-                {results.name.map((names, index) => 
-                {return <div key={index} className='container'> {names.infos.name} </div>
+                {results.gender.map((names, index) => 
+                {return <div key={index} className='container'> {names.names.name} </div>
                 })}
                 </div>
 
