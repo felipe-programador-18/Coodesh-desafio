@@ -3,8 +3,16 @@ import ContextManager from '../Context/context'
 
 const User = (props) => {
     const {allusers, updatingpeople} = useContext(ContextManager)
-    const results = props
-    const letter = "📃"
+    const results = props;
+    
+    const onHandlingLetter = () =>{
+        // make some test inside here
+        updatingpeople(results.name)
+        updatingpeople(results.email)
+    }
+    
+    
+    const letter = allusers.includes(results.name) ?  "📜" : "📃"
     
     return (<div className='container-xl d-flex'>
             
@@ -40,7 +48,7 @@ const User = (props) => {
     
     
     
-      <button> {letter} </button>
+      <button onClick={onHandlingLetter} > {letter} </button>
     
     
     
