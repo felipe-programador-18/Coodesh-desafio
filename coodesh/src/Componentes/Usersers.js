@@ -17,12 +17,12 @@ const Usersers = (props) =>{
         }
     }
 
-
-    return(<div>
+    return(
+      <div>
                 
-        <div className='container d-flex flex-row justify-content-between align-items-center p-4'>
+         <div className='container d-flex flex-row justify-content-between align-items-center p-4'>
            <h1>Paginação:</h1>  
-          <Pagination 
+           <Pagination 
            page={page}
            totalPage={totalPage}
            onLeftClick ={onLeftHandling}
@@ -38,13 +38,7 @@ const Usersers = (props) =>{
             </div>  
             )}
         </div>
-        
-        
-        
-
-
-
-        
+         
         <div>
         </div>
 
