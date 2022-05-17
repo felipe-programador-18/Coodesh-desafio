@@ -16,20 +16,20 @@ const User = (props) => {
     return (<div className='container-xl d-flex'>
             
             <div className='p-2 p-l-4'>
-                <img id='image-size' className='me-2'  src={results.picture} alt={results.name} />
+                <img id='image-size' className='me-2'  alt={results.name} src={results.picture.medium} />
             </div>
 
         <div className='container d-flex flex-row p-4 justify-content-between'>
             <div className='d-flex flex-row justify-content-between align-items-center'>
-                {results.name}
-                {results.id}
+               <h3> {results.name} </h3>
+                <div className='container'>{results.id} </div>
             </div>
           
 
             <div className='d-flex flex-row align-items-center justify-content-between'>
                 <div className='d-flex'>
-                {results.gender.map((names, index) => 
-                {return <div key={index} className='container'> {names.names.name} </div>
+                {results.gender.map((info, index) => 
+                {return <div key={index} className='container'> {info.info.name} </div>
                 })}
                 </div>
 
