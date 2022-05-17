@@ -41,7 +41,7 @@ function App() {
  }
 
  const loadingUserFav = () => {
-   const savePeople = JSON.stringify(window.localStorage.getItem(FavoritosUser))
+   const savePeople = JSON.stringify(window.localStorage.getItem(FavoritosUser)) || []
    setinteresting(savePeople)
  }
  useEffect(() =>{
@@ -68,7 +68,7 @@ function App() {
   
  const onHandLoadUser = async (results) => {
   if(!results){
-    fectchinUserApi()
+    return fectchinUserApi()
   }
   setloading(true)
   setfound(false)
