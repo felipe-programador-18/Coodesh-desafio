@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ContextManager = React.createContext({
-    allusers: []
+    allusers: [], favoritesusers
 })
 export const ContextProvider = ContextManager.Provider
 export default ContextManager
