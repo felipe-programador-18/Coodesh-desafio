@@ -27,14 +27,15 @@ function App() {
       //create const to manage all dates!!
       //this code passes it promisses and latter created promise all to manage all code
       const data = await LimitSearch( ItensPorPage, ItensPorPage*page)
-      console.log(data)
-      const promises = data.results.map(async(results) =>{
+      console.log('see here now', data)
+      const promises = data.getResults.map(async(results) =>{
          return await  GetSearchApiData(results.url)
       }) 
       const getResults = await Promise.all(promises)
       setpessoa(getResults)
       setloading(false)
-      setTotalPage(Math.ceil(data.info / ItensPorPage))   
+      setTotalPage(Math.ceil(data.seed / ItensPorPage))
+     // console.log(getResults)   
     } catch (error) {
       console.log('error in fetching!!!', error)
     }
