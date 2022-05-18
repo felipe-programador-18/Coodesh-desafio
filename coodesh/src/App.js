@@ -16,7 +16,6 @@ function App() {
  const [loading, setloading] = useState(false)
  const [found, setfound] = useState(false)
  const [pessoas, setpessoa] = useState([])
-
  //it working with context
  const [interesting, setinteresting] = useState([])
 
@@ -28,6 +27,7 @@ function App() {
       //create const to manage all dates!!
       //this code passes it promisses and latter created promise all to manage all code
       const data = await LimitSearch( ItensPorPage, ItensPorPage*page)
+      console.log(data)
       const promises = data.results.map(async(results) =>{
          return await  GetSearchApiData(results.url)
       }) 
