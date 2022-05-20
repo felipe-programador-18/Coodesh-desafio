@@ -32,10 +32,11 @@ function App() {
          return await  GetSearchApiData(results.url)
       }) 
       const getResults = await Promise.all(promises)
+      console.log('thought about solution', getResults)
       setpessoa(getResults)
       setloading(false)
-      setTotalPage(Math.ceil(data.seed / ItensPorPage))
-     // console.log(getResults)   
+      setTotalPage(Math.ceil(data.info / ItensPorPage))
+        
     } catch (error) {
       console.log('error in fetching!!!', error)
     }
