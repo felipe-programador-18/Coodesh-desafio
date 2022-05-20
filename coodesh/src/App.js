@@ -28,15 +28,16 @@ function App() {
       //this code passes it promisses and latter created promise all to manage all code
       const data = await LimitSearch( ItensPorPage, ItensPorPage*page)
       console.log('see here now', data)
-      const promises = data.getResults.map(async(results) =>{
+      const promises = data.newresults.map(async(results) =>{
          return await  GetSearchApiData(results.url)
       }) 
-      const getResults = await Promise.all(promises)
-      console.log('thought about solution', getResults)
-      setpessoa(getResults)
+      
+      const newresults = await Promise.all(promises)
+      console.log('thought about solution', newresults)
+      setpessoa(newresults)
       setloading(false)
-      setTotalPage(Math.ceil(data.info / ItensPorPage))
-        
+      setTotalPage(Math.ceil(data.results / ItensPorPage))
+      console.log('tttt',newresults)  
     } catch (error) {
       console.log('error in fetching!!!', error)
     }
