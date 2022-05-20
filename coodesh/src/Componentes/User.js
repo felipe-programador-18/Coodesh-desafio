@@ -16,7 +16,7 @@ const User = (props) => {
     return (<div className='container-xl d-flex'>
             
             <div className='p-2 p-l-4'>
-                <img id='image-size' className='me-2'  alt={results.name} src={results.picture.large} />
+                <img id='image-size' className='me-2'  alt={results.name} src={results.picture} />
             </div>
 
         <div className='container d-flex flex-row p-4 justify-content-between'>
