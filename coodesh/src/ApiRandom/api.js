@@ -5,7 +5,6 @@ export const SearchUser = async(results) => {
         let url =`https://randomuser.me/api/?results=${results}`
         const response = await fetch(url)
         return await response.json()
-        
     } catch (error) {
        console.log('error in search, wake please !!', error)
     }
