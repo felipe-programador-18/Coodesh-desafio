@@ -9,7 +9,7 @@ const User = (props) => {
         // make some test inside here
         updatingpeople(results.name)
     }
-    
+  
     
     const letter = allusers.includes(results.name) ?  "📜" : "📃"
     
