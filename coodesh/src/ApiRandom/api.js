@@ -11,7 +11,7 @@ export const SearchUser = async(results) => {
 }
 
 //here boudaries fielt of search
-export const LimitSearch = async(page=0,seed='',results=50) => {
+export const LimitSearch = async(page=0,seed=1,results=50) => {
    try {
        let url =`https://randomuser.me/api?/page=?${page}&results=${results}&seed=${seed}`
        //&seed=${seed}
