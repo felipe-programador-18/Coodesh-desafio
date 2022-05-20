@@ -3,6 +3,7 @@
 export const SearchUser = async(results) => {
     try {
         let url =`https://randomuser.me/api/?results=${results}`
+        //=${results}
         const response = await fetch(url)
         return await response.json()
     } catch (error) {
