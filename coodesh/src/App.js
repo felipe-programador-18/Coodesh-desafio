@@ -22,31 +22,32 @@ function App() {
   //the functions making all connection about api
  const fectchinUserApi =  async () => {
     try {  
-      setloading(true)
-      setfound(false)
-      //create const to manage all dates!!
-      //this code passes it promisses and latter created promise all to manage all code
-      const data = await LimitSearch( ItensPorPage, ItensPorPage*page)
-      console.log('see here now', data)
-      const promises = data.newresults.map(async(results) =>{
-         return await  GetSearchApiData(results.url)
-      }) 
+    setloading(true)
+    setfound(false)
+    //create const to manage all dates!!
+    //this code passes it promisses and latter created promise all tomanage all code
+    const data = await LimitSearch( ItensPorPage, ItensPorPage*page)
+    console.log('see here now', data)
+    const promises = data.newresults.map(async(results) =>{
+      return await  GetSearchApiData(results.url)
+    }) 
       
-      const newresults = await Promise.all(promises)
-      console.log('thought about solution', newresults)
-      setpessoa(newresults)
-      setloading(false)
-      setTotalPage(Math.ceil(data.results / ItensPorPage))
-      console.log('tttt',newresults)  
+    const newresults = await Promise.all(promises)
+    console.log('thought about solution', newresults)
+    setpessoa(newresults)
+    setloading(false)
+    setTotalPage(Math.ceil(data.results / ItensPorPage))
+    console.log('tttt',newresults)  
     } catch (error) {
-      console.log('error in fetching!!!', error)
-    }
+    console.log('error in fetching!!!', error)
+  }
  }
 
  const loadingUserFav = () => {
    const savePeople = JSON.stringify(window.localStorage.getItem(FavoritosUser)) || []
    setinteresting(savePeople)
  }
+ 
  useEffect(() =>{
  //this care of loading people interesting!!!
     loadingUserFav()
