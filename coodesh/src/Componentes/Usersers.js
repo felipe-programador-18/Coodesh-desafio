@@ -17,8 +17,9 @@ const Usersers = (props) =>{
     }
 
     return(
+        
       <div>
-                
+                        
          <div className='container d-flex flex-row justify-content-between align-items-center p-4'>
            <h1>Paginação:</h1>  
            <Pagination 
