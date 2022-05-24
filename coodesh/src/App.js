@@ -31,12 +31,13 @@ function App() {
     const promises = data.newresults.map(async(results) =>{
       return await  GetSearchApiData(results.url)
     }) 
+
       
     const newresults = await Promise.all(promises)
     console.log('thought about solution', newresults)
     setpessoa(newresults)
     setloading(false)
-    setTotalPage(Math.ceil(data.results / ItensPorPage))
+    setTotalPage(Math.ceil(data.info / ItensPorPage))
     console.log('tttt',newresults)  
     } catch (error) {
     console.log('error in fetching!!!', error)
@@ -47,7 +48,7 @@ function App() {
    const savePeople = JSON.stringify(window.localStorage.getItem(FavoritosUser)) || []
    setinteresting(savePeople)
  }
- 
+
  useEffect(() =>{
  //this care of loading people interesting!!!
     loadingUserFav()
@@ -105,6 +106,7 @@ function App() {
 
        />)
       }
+     
     </div>
  </ContextProvider>);
 }
