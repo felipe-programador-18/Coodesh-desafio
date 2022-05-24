@@ -24,12 +24,12 @@ export const LimitSearch = async(page=0,seed=1,results=50) => {
 }
 
 // here care about date api
-export const GetSearchApiData = async (url) => {
-   try { 
-       const response = await fetch(url)
-       return await response.json()  
-   } catch (error) {
-       console.log('error this code', error)
-   }
-}
+//export const GetSearchApiData = async (url) => {
+  // try { 
+    //   const response = await fetch(url)
+      // return await response.json()  
+  // } catch (error) {
+   //    console.log('error this code', error)
+  // }
+//}
 
