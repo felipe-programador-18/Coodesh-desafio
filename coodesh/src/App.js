@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { GetSearchApiData,SearchUser ,LimitSearch } from './ApiRandom/api'
+import {SearchUser ,LimitSearch } from './ApiRandom/api'
 import './App.css'
 import NavBar from './Componentes/Navbar'
 import SearchBar from './Componentes/SearchBar'
@@ -24,19 +24,12 @@ function App() {
     try {  
     setloading(true)
     setfound(false)
-    //create const to manage all dates!!
-    //this code passes it promisses and latter created promise all tomanage all code
     const data = await LimitSearch( ItensPorPage, ItensPorPage*page)
     console.log('see here now', data)
-    //const promises = data.newresults.map(async(results) =>{
-      //return await  //GetSearchApiData(results.url)
-    //}) 
-    const newresults = await Promise.all(data)
-    console.log('thought about solution', newresults)
-    setpessoa(newresults)
+    setpessoa(data.results)
     setloading(false)
-    setTotalPage(Math.ceil(data.info / ItensPorPage))
-    console.log('tttt',newresults)  
+    setTotalPage(Math.ceil(data.results / ItensPorPage))
+     
     } catch (error) {
     console.log('error in fetching!!!', error)
   }
