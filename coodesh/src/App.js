@@ -36,7 +36,7 @@ function App() {
  }
 
  const loadingUserFav = () => {
-   const savePeople = JSON.stringify(window.localStorage.getItem(FavoritosUser)) || []
+   const savePeople = JSON.parse(window.localStorage.getItem(FavoritosUser)) || []
    setinteresting(savePeople)
  }
 
@@ -49,7 +49,7 @@ function App() {
  },[page])
 
  const updatePeopleInteresting = (name) => {
-   const updatePeople =  [...interesting]
+   const updatePeople = [...interesting]
    const peopleIndex = interesting.indexOf(name)
    if(peopleIndex >= 0){
       updatePeople.splice(peopleIndex,1)
