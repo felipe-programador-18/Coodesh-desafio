@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ContextManager = React.createContext({
-    allusers: [],
+    allusers: {},
     updatingpeople: (id) => null
 })
 export const ContextProvider = ContextManager.Provider
