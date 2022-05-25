@@ -20,7 +20,7 @@ const Usersers = (props) =>{
         
       <div>
                         
-         <div className='container d-flex flex-row justify-content-between align-items-center p-4'>
+         <div className='people-header'>
            <h1>Paginação:</h1>  
            <Pagination 
            page={page}
@@ -29,7 +29,7 @@ const Usersers = (props) =>{
            onRightClick = {onRightHandling} 
            />
            {loading ? (<div>Carregando .....</div>) :
-            (<div className='display-grid' >
+            (<div className='people-grid' >
                 {pessoas && pessoas.map((results, index) => {
                     return(
                         <User key={index} results={results}/>
