@@ -18,7 +18,7 @@ const User = (props) => {
     <div className='container-xl d-flex'>
             
             <div className='image-container-people'>
-                <img id='image-size' className='' src={results.picture.thumbnail}  alt={results.name.first}  />
+                <img id='image-size' className='' src={results.picture.thumbnail }  alt={results.name.first}  />
             </div>
            
         <div className='card-people'>
