@@ -5,7 +5,7 @@ import ContextManager from '../Context/context'
 const NavBar = () => {
    const {allusers}  = useContext(ContextManager)
    return (<nav>
-            <div className='container bg-secondary'>
+            <div className='container d-flex justify-content-center align-items-center'>
                <h1>Buscar Pessoas</h1>
             </div>
             <div>
