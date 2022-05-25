@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Pagination = (props) => {
- const {page, totalPage, onLeftClick, onRightClick } = props
+ const {page, totalPage, onLeftClick, onRightClick } = props;
 
  return(<div className='d-flex flex-row align-items-center'>
      
