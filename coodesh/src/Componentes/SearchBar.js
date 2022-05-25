@@ -18,11 +18,11 @@ const SearchBar = (props) => {
   
 
    return(
-        <div className=''>
-          <div>
+        <div className='search-container justify-content-center'>
+          <div className='search'>
               <input placeholder='buscar usuario' onChange={LidaOnchange} ></input>
           </div>
-          <div>
+          <div className='search-btn'>
               <button onClick={LidaComBusca}>Buscar</button>
           </div>
         </div>
