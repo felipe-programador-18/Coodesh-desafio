@@ -23,7 +23,7 @@ const Usersers = (props) =>{
          <div className='people-header'>
            <h1>Paginação:</h1>  
            <Pagination 
-           page={page}
+           page={page+1}
            totalPage={totalPage}
            onLeftClick ={onLeftHandling}
            onRightClick = {onRightHandling} 
