@@ -18,7 +18,7 @@ const User = (props) => {
     <div className='container-xl d-flex'>
             
             <div className='image-container-people'>
-                <img id='image-size' className='' src={results.picture.thumbnail }  alt={results.name.first}  />
+                <img id='image-size'src={results.picture.thumbnail }  alt={results.name.first}  />
             </div>
            
         <div className='card-people'>
@@ -26,6 +26,7 @@ const User = (props) => {
             <div className='d-flex flex-row justify-content-between align-items-center'>
                <h3> {results.name.first} </h3>
               <div className='container'> #{results.id.value} </div>  
+              <div> email:{results.email}</div>
             </div>
              
 
