@@ -40,13 +40,14 @@ function App() {
    setinteresting(savePeople)
  }
 
+ useEffect(() => {
+   fectchinUserApi()
+ },[page])
+
  useEffect(() =>{
  //this care of loading people interesting!!!
     loadingUserFav()
  },[]) 
- useEffect(() => {
-   fectchinUserApi()
- },[page])
 
  const updatePeopleInteresting = (name) => {
    const updatePeople = [...interesting]
