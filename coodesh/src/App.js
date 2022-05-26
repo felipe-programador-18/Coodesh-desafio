@@ -9,7 +9,7 @@ import { ContextProvider } from './Context/context'
 const FavoritosUser ='users'
 
 function App() {
- const ItensPorPage = 50
+ const ItensPorPage = 25
 
  const [page, setPage] = useState(0)
  const [totalPage, setTotalPage] = useState(0)
@@ -25,7 +25,7 @@ function App() {
     setloading(true)
     setfound(false)
     const data = await LimitSearch(ItensPorPage, ItensPorPage*page)
-    console.log('see here now', data.results)
+    console.log('see here now', data)
     
     setpessoa(data.results)
     setloading(false)
