@@ -3,10 +3,10 @@ import React,{useState} from 'react'
 const SearchBar = (props) => {
    const [busca, setbusca] = useState("Mr")
    const {onSearch} = props
-  
+
    const LidaOnchange = (e) => {
        setbusca(e.target.value)
-      if(e.target.value.lenght === 0 ){
+      if(e.target.value === 0 ){
           onSearch(undefined)
       }
    }
@@ -20,7 +20,7 @@ const SearchBar = (props) => {
    return(
         <div className='search-container justify-content-center'>
           <div className='search'>
-              <input placeholder='buscar usuario' onChange={LidaOnchange} ></input>
+              <input placeholder='buscar usuario' onChange={LidaOnchange} />
           </div>
           <div className='search-btn'>
               <button onClick={LidaComBusca}>Buscar</button>
