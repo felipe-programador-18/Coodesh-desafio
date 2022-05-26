@@ -1,7 +1,11 @@
 *{
   margin: 0%;
-  background-color:rgba(121, 142, 155, 0.65)
+  background-color:rgba(121, 142, 155, 0.65);
+ 
 }
+
+
+
 .image-size{
   width: 60px;
   height: 60px;
