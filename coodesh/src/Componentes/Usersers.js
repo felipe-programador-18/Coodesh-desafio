@@ -4,6 +4,7 @@ import Pagination from './Pagination'
 
 const Usersers = (props) =>{
     const {pessoas, page, loading, setPage,  totalPage } = props ;
+     console.log('here page', totalPage)
     const onLeftHandling = () =>{
         if(page >0){
             setPage(page-1)
