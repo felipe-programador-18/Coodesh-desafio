@@ -6,7 +6,7 @@ import SearchBar from './Componentes/SearchBar'
 import Usersers from './Componentes/Usersers'
 import { ContextProvider } from './Context/context'
 
-const FavoritosUser = 'users'
+const FavoritosUser ='users'
 
 function App() {
  const ItensPorPage = 50
@@ -24,8 +24,8 @@ function App() {
     try {  
     setloading(true)
     setfound(false)
-    const data = await LimitSearch( ItensPorPage, ItensPorPage*page)
-    console.log('see here now', data)
+    const data = await LimitSearch(ItensPorPage, ItensPorPage*page)
+    console.log('see here now', data.results)
     setpessoa(data.results)
     setloading(false)
     setTotalPage(Math.ceil(data.results / ItensPorPage))
@@ -74,7 +74,7 @@ function App() {
   }else{
     setpessoa([result])
     setPage(0)
-    setTotalPage(1)
+    setTotalPage(0)
   }
   setloading(false)
  }
@@ -88,16 +88,16 @@ function App() {
      <NavBar/>
      <SearchBar onSearch= {onHandLoadUser} />
       {found ? (<div className='container  bg-dark text-center'>Nenhum usuario encontrado!!</div>) :
-      (<Usersers 
+      <Usersers 
         pessoas={pessoas}
         loading={loading}
         page={page}
         setPage = {setPage}
         totalPage= {totalPage}
 
-       />)
+       />
       }
-     
+    
     </div>
  </ContextProvider>);
 }
