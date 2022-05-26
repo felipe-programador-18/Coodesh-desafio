@@ -6,7 +6,7 @@ const Pagination = (props) => {
  return(<div className='d-flex flex-row align-items-center'>
      
           <button onClick={onLeftClick}><div>⬅</div></button>
-            <div> {page}: {totalPage} </div>
+            <div> {page} </div>
           <button onClick={onRightClick}><div>➡</div></button>      
            
  </div>)
