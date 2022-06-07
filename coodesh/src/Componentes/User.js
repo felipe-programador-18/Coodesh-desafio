@@ -57,32 +57,7 @@ const User = (props) => {
 
 
 
-            
-           { /* <div className='image-container-people'>
-                <img id='image-size'src={results.picture.thumbnail }  alt={results.name.first}  />
-            </div>
-      */ }
-        
-       { /*  <div className='card-people'>
-           
-            <div className=''>
-               <h3> {results.name.first} </h3>
-              <div className=''> #{results.id.value} </div>  
-              <div> email:{results.email}</div><hr/>
-              <div> sexo:{results.gender}</div>
-            </div>
-             
-
-            <div className=''>
-                <div className=''>
-                    
-                  {<div className='' > {`${results.name.first} ${results.name.last}` }</div>  }
-                 
-                </div>
-
-            </div>
-              
-    </div> */ } 
+          
       <button className='style-button' onClick={onHandlingLetter} > {letter} </button>
      
        </div>
