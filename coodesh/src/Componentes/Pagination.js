@@ -3,11 +3,11 @@ import React from 'react'
 const Pagination = (props) => {
  const {page, totalPage, onLeftClick, onRightClick } = props;
   console.log('teste page', page )
- return(<div className='d-flex flex-row align-items-center'>
+ return(<div className='pagination'>
      
-          <button onClick={onLeftClick}><div>⬅</div></button>
+          <button id='testing' onClick={onLeftClick}><div>⬅</div></button>
             <div> {page} </div>
-          <button onClick={onRightClick}><div>➡</div></button>      
+          <button id='test' onClick={onRightClick}><div>➡</div></button>      
            
  </div>)
 }
