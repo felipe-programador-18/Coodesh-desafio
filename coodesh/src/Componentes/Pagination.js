@@ -1,13 +1,13 @@
 import React from 'react'
-
+import {BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill} from 'react-icons/bs'
 const Pagination = (props) => {
- const {page, totalPage, onLeftClick, onRightClick } = props;
+ const {page, onLeftClick, onRightClick } = props;
   console.log('teste page', page )
  return(<div className='pagination'>
      
-          <button id='testing' onClick={onLeftClick}><div>⬅</div></button>
+          <button id='testing' onClick={onLeftClick}><div><BsFillArrowLeftSquareFill/> </div></button>
             <div> {page} </div>
-          <button id='test' onClick={onRightClick}><div>➡</div></button>      
+          <button id='test' onClick={onRightClick}><div><BsFillArrowRightSquareFill/> </div></button>      
            
  </div>)
 }
