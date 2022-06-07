@@ -3,7 +3,6 @@ import {SearchUser ,LimitSearch } from './ApiRandom/api'
 import './App.css'
 import NavBar from './Componentes/Navbar'
 import SearchBar from './Componentes/SearchBar'
-import User from './Componentes/User'
 import Usersers from './Componentes/Usersers'
 import { ContextProvider } from './Context/context'
 
@@ -96,7 +95,7 @@ function App() {
         loading={loading}
         page={page}
         setPage = {setPage}
-        totalPage= {totalPage}
+       
 
        />
       }
