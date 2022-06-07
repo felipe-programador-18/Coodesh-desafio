@@ -21,24 +21,27 @@ const Usersers = (props) =>{
         
       <div>
                         
-         <div className='people-header'>
-           <h1>Paginação:</h1>  
+         <div className='people-header'> 
            <Pagination 
            page={page+1}
            totalPage={totalPage}
            onLeftClick ={onLeftHandling}
            onRightClick = {onRightHandling} 
            />
+             {/* <div className='people-grid' > */}
+
            {loading ? (<div>Carregando .....</div>) :
-            (<div className='people-grid' >
-                {pessoas && pessoas.map((results, index) => {
+              ( <>  
+              {pessoas && pessoas.map((results, index) => {
                     return(
                         <User key={index} results={results}/>
                     )
-                })}
-            </div>  
-            )}
-        </div>
+                   })
+                   } 
+                 </> 
+               ) 
+            }
+           </div>
          
         <div>
         </div>
