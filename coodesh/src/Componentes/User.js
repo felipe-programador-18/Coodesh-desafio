@@ -17,7 +17,7 @@ const User = (props) => {
     return (   
     <div className='container'>
 
-     <table class="table">
+<table class="table">
   <thead>
     <tr>
       <th scope='col'>People</th>
@@ -29,13 +29,11 @@ const User = (props) => {
       <th scope='col'>Endereço</th>
       <th scope='col'>Nacionalidade</th>
       <th scope='col'>ID</th>
-
-
-       
-    </tr>
+   </tr>
   </thead>
   <tbody> 
-    <tr className='table-dark'>
+
+    { /* <tr className='table-dark'>
       <th scope="row"> <img id='image-size'src={results.picture.thumbnail} /></th>
       <td>{ `${results.name.first} ${results.name.last}` }  </td>
       <td>{results.email} </td>
@@ -45,7 +43,7 @@ const User = (props) => {
       <td> {results.location.city} </td>
       <td>{results.nat} </td>
       <td> {results.id.name} </td>
-    </tr>
+    </tr> */ }
   </tbody>
 </table>
                  

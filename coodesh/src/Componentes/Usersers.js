@@ -32,12 +32,12 @@ const Usersers = (props) =>{
 
            {loading ? (<div>Carregando .....</div>) :
               ( <>  
-              {pessoas && pessoas.map((results, index) => {
-                    return(
-                        <User key={index} results={results}/>
-                    )
-                   })
-                   } 
+               {  pessoas &&  pessoas.map((results,index) => {
+                   return ( <User key={index} results={results} /> )
+                    })
+                }
+               )
+                 
                  </> 
                ) 
             }
