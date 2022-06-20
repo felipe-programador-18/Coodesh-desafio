@@ -2,7 +2,7 @@
 import ContextManager from '../Context/context'
 import React, {useContext} from 'react'
 import Pagination from './Pagination'
-
+import Convert from './Converdata'
 const Usersers = (props) =>{
     const {allusers, updatingpeople} = useContext(ContextManager)
     const {results} =props;
@@ -12,7 +12,6 @@ const Usersers = (props) =>{
         // make some test inside here
         updatingpeople(results.name)
     }
-    
     
     const {pessoas, page, loading, setPage, totalPage } = props ;
     const onLeftHandling = () =>{
@@ -25,7 +24,6 @@ const Usersers = (props) =>{
             setPage(page+1)
         }
     }
-
     return(      
       <div>
                         
@@ -67,7 +65,7 @@ const Usersers = (props) =>{
                  <td>{ `${results.name.first} ${results.name.last}` } </td>
                  <td>{results.email} </td>
                  <td>{results.gender}</td>
-                 <td>{results.dob.date}</td>
+                 <td><Convert timezone={results.dob.date} /> </td>
                  <td>{results.cell}</td>
                  <td> {results.location.city} </td>
                  <td>{results.nat} </td>
