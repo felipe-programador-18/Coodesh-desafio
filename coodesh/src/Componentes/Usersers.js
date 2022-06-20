@@ -51,6 +51,7 @@ const Usersers = (props) =>{
                 <th scope='col'>Endereço</th>
                 <th scope='col'>Nacionalidade</th>
                 <th scope='col'>ID</th>
+                
                </tr>
                </thead>  
                </table>
@@ -70,6 +71,12 @@ const Usersers = (props) =>{
                  <td> {results.location.city} </td>
                  <td>{results.nat} </td>
                  <td> {results.id.name} </td>
+
+
+
+
+                 <td>Compartilhar</td>
+                           
                 </tr>  
                </tbody>
                </table>
