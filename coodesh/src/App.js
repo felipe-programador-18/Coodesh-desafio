@@ -12,7 +12,7 @@ function App() {
  const ItensPorPage = 25
 
  const [page, setPage] = useState(0)
- const [totalPage, setTotalPage] = useState(0)
+ const [ totalPage,setTotalPage] = useState(0)
  const [loading, setloading] = useState(false)
  const [found, setfound] = useState(false)
  const [pessoas, setpessoa] = useState([])
@@ -83,7 +83,8 @@ function App() {
 
   
   
-  return ( <ContextProvider value={{allusers: interesting, 
+  return ( 
+  <ContextProvider value={{allusers: interesting, 
      updatingpeople: updatePeopleInteresting
      }} >
     <div className="App">
@@ -95,8 +96,6 @@ function App() {
         loading={loading}
         page={page}
         setPage = {setPage}
-       
-
        />
       }
     

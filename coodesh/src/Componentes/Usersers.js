@@ -3,22 +3,20 @@ import User from './User'
 import Pagination from './Pagination'
 
 const Usersers = (props) =>{
-    const {pessoas, page, loading, setPage,  totalPage } = props ;
-     console.log('here page', totalPage)
+    const {pessoas, page, loading, setPage, totalPage } = props ;
+     console.log('here page', pessoas)
     const onLeftHandling = () =>{
         if(page >0){
             setPage(page-1)
         }
-    }
-    
+    }  
     const onRightHandling = () => {
         if(page+1 !== totalPage){
             setPage(page+1)
         }
     }
 
-    return(
-        
+    return(      
       <div>
                         
          <div className='people-header'> 
@@ -29,18 +27,18 @@ const Usersers = (props) =>{
            onRightClick = {onRightHandling} 
            />
              {/* <div className='people-grid' > */}
-
+             <div>
+               
            {loading ? (<div>Carregando .....</div>) :
-              ( <>  
-               {  pessoas &&  pessoas.map((results,index) => {
-                   return ( <User key={index} results={results} /> )
-                    })
-                }
-               )
-                 
-                 </> 
-               ) 
+            ( <>
+            { pessoas && pessoas.map((results, index) => {
+               return ( <User index={index} results={results}  
+                 />)
+              })
+             }
+            </> )
             }
+            </div>
            </div>
          
         <div>

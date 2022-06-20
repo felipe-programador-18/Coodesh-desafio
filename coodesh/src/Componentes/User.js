@@ -3,7 +3,7 @@ import ContextManager from '../Context/context'
 
 const User = (props) => {
     const {allusers, updatingpeople} = useContext(ContextManager)
-    const {results} = props;
+    const {results} =props;
     const letter = allusers.includes(results.name) ?  "📜" : "📃"
     
     const onHandlingLetter = () =>{
@@ -12,15 +12,12 @@ const User = (props) => {
     }
   
    //some issues about code is json is object, because is undefined 
-    
-    
-    return (   
+     return (   
     <div className='container'>
-
-<table class="table">
+      <table className="table">
   <thead>
     <tr>
-      <th scope='col'>People</th>
+    <th scope='col'>People</th>
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
       <th scope="col">Genero</th>
@@ -32,9 +29,9 @@ const User = (props) => {
    </tr>
   </thead>
   <tbody> 
-
-    { /* <tr className='table-dark'>
-      <th scope="row"> <img id='image-size'src={results.picture.thumbnail} /></th>
+  {/* <td>{results.gender} </td> */}
+      <tr className='table-dark'>
+      <th scope="row"> <img id='image-size'src={results.picture.thumbnail} alt='pictureusers' /></th>
       <td>{ `${results.name.first} ${results.name.last}` }  </td>
       <td>{results.email} </td>
       <td>{results.gender}</td>
@@ -43,24 +40,14 @@ const User = (props) => {
       <td> {results.location.city} </td>
       <td>{results.nat} </td>
       <td> {results.id.name} </td>
-    </tr> */ }
+    </tr>  
   </tbody>
 </table>
-                 
-
-
-
-
-
-
-
-
-          
-      <button className='style-button' onClick={onHandlingLetter} > {letter} </button>
+ 
+<button className='style-button' onClick={onHandlingLetter} > {letter} </button>
      
-       </div>
-
- )}
+ </div>
+)}
 
 
 export default User
