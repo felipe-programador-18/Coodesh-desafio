@@ -2,7 +2,7 @@ import React from 'react'
 import {BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill} from 'react-icons/bs'
 const Pagination = (props) => {
  const {page, onLeftClick, onRightClick } = props;
-  console.log('teste page', page )
+
  return(<div className='pagination'>
      
           <button id='testing' onClick={onLeftClick}><div><BsFillArrowLeftSquareFill/> </div></button>
