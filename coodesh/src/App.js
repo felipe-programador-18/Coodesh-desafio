@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import {SearchUser ,LimitSearch } from './ApiRandom/api'
 import './App.css'
+import CreateTeste from './Componentes/modal'
 import NavBar from './Componentes/Navbar'
 import SearchBar from './Componentes/SearchBar'
 import Usersers from './Componentes/Usersers'
 import { ContextProvider } from './Context/context'
-
 const FavoritosUser ='users'
 
 function App() {
@@ -88,6 +88,7 @@ function App() {
     <div className="App">
      <NavBar/>
      <SearchBar onSearch= {onHandLoadUser} />
+    
       {found ? (<div className='container  bg-dark text-center'>Nenhum usuario encontrado!!</div>) :
       <Usersers 
         pessoas={pessoas}
@@ -96,6 +97,7 @@ function App() {
         setPage = {setPage}
        />
       }
+
     
     </div>
  </ContextProvider>);
