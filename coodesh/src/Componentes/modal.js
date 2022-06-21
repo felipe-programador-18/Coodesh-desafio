@@ -1,30 +1,110 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Modal from 'react-modal';
+import Convert from './Converdata';
 
-const Modal = () => {
-    return (<>
-    
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-    
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
+
+
+const CreateTeste = (props) => {
+  //Create some testing to see new code
+  
+  
+  const {pessoas, loading} = props;
+
+
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+
+   return(<>
+   
+   {/* <div>
+      <button onClick={openModal} >Open Modal</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+      <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+        <button onClick={closeModal}>close</button>
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </Modal>
+   </div> */ }
+
+
+
+        {loading ?  <button onClick={openModal} > Open Modal</button> :
+          (<> 
+             <div>
+      <button onClick={openModal} >Open Modal</button>
+      <Modal
+       isOpen={modalIsOpen}
+       onAfterOpen={afterOpenModal}
+       onRequestClose={closeModal}
+       contentLabel="Example Modal"
+       style={customStyles}
+      >
+      </Modal>
+      </div>             
+
+            { pessoas && pessoas.map((results) => {
+               return ( <>
+            <Modal key={results} isOpen={modalIsOpen} onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            contentLabel="Example Modal"
+            style={customStyles}>
+              <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Teste </h2>
+            
+            <button onClick={closeModal}>close</button>
+             <div>I am a modal</div>
+             <form>
+             <input />
+             <button>tab navigation</button>
+             <button>stays</button>
+             <button>inside</button>
+             <button>the modal</button>
+             </form>
+              </Modal>
+                           
+               </>)
+              })
+            }
+          
+          </>)
+          }
     </>)
 }
 
-export default Modal
+export default CreateTeste
