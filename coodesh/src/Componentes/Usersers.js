@@ -3,6 +3,10 @@ import ContextManager from '../Context/context'
 import React, {useContext} from 'react'
 import Pagination from './Pagination'
 import Convert from './Converdata'
+import CreateTeste from './modal'
+
+
+
 const Usersers = (props) =>{
     const {allusers, updatingpeople} = useContext(ContextManager)
     const {results} =props;
@@ -70,16 +74,11 @@ const Usersers = (props) =>{
                  <td>{results.cell}</td>
                  <td> {results.location.city} </td>
                  <td>{results.nat} </td>
-                 <td> {results.id.name} </td>
-
-
-
-
-                 <td>Compartilhar</td>
-                           
+                 <td> {results.id.name} </td>            
                 </tr>  
                </tbody>
                </table>
+                <CreateTeste/>  
               </div>
                )
               })
