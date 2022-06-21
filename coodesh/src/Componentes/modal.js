@@ -18,7 +18,7 @@ const customStyles = {
 const CreateTeste = (props) => {
   //Create some testing to see new code
   const {pessoas, loading} = props;
-  let subtitle;
+  //let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
@@ -39,7 +39,7 @@ const CreateTeste = (props) => {
    
         {loading ?  <h1>loading ...</h1> :
           (<> 
-             <div>
+               <div>
             <button onClick={openModal} >Url</button>
             <Modal
             isOpen={modalIsOpen}
@@ -96,7 +96,6 @@ const CreateTeste = (props) => {
 
             { /* { pessoas && pessoas.map((results) => {
                return ( <>
-
              <Modal key={results} isOpen={modalIsOpen} 
             onRequestClose={closeModal}
             contentLabel="Example Modal"
@@ -109,7 +108,6 @@ const CreateTeste = (props) => {
                </>)
               })
              } */}
-          
           </>)
         
         }
