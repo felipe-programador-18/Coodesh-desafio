@@ -47,48 +47,31 @@ const CreateTeste = (props) => {
             contentLabel="Example Modal"
             style={customStyles}
             >
-              <table className="table container-sm">
-               <thead>
-              <tr>
-              <th scope='col'>Pessoa</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Email</th>
-                <th scope="col">Genero</th>
-                <th scope='col'>Dt Nasc</th>
-                <th scope='col'>Tel</th>
-                <th scope='col'>Endereço</th>
-                <th scope='col'>Nacionalidade</th>
-                <th scope='col'>ID</th>
-                
-               </tr>
-               </thead>  
-               </table>
+              <div>
+              <h2 >Pessoa</h2>
+              <h2 >Nome</h2>
+              <h2 >Email-test</h2>
+              <h2 >numero</h2>
+              <h2 >a</h2>
+              <h2 >b</h2>
+              <h2 >c</h2>
+              </div>
+            
               
-             {pessoas && pessoas.map((results) => {
-               
+             {pessoas && pessoas.map((results) => {  
                return ( <div key={results}>
                 <Modal 
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                contentLabel="Example Modal"
-                style={customStyles}>
-                <table className="table">
-                 <tbody> 
-                 <tr className='table-light'  key={results}>
-                 <th scope="row"> <img id='image-size'src={results.picture.thumbnail} alt='pictureusers' />
-                 </th>
-                 <td>{ `${results.name.first} ${results.name.last}` } </td>
-                 <td>{results.email} </td>
-                 <td>{results.gender}</td>
-                 <td><Convert timezone={results.dob.date} /> </td>
-                 <td>{results.cell}</td>
-                 <td> {results.location.city} </td>
-                 <td>{results.nat} </td>
-                 <td> {results.id.name} </td>            
-                </tr>  
-               </tbody>
-               </table>
-               </Modal>
+                 isOpen={modalIsOpen}
+                 onRequestClose={closeModal}
+                 contentLabel="Example Modal"
+                 style={customStyles}>
+
+                    <div key={results} >
+                      <h1>{results.name.firts}</h1>
+                      <h1>{results.emial} </h1>
+                    </div>
+                
+                </Modal>
                </div> )
              } ) }
            </Modal>     
