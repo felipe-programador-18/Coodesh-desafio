@@ -11,7 +11,9 @@ const Usersers = (props) =>{
     const {allusers, updatingpeople} = useContext(ContextManager)
     const {results} =props;
    // const letter = allusers.includes(results.name) ?  "📜" : "📃"
-    
+  
+   
+   
     const onHandlingLetter = () =>{
         // make some test inside here
         updatingpeople(results.name)
@@ -78,7 +80,7 @@ const Usersers = (props) =>{
                 </tr>  
                </tbody>
                </table>
-                 <CreateTeste/>  
+                 <CreateTeste/>
               </div>
                )
               })
