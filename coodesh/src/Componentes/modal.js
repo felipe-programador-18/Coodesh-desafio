@@ -17,14 +17,12 @@ const customStyles = {
   },
 };
 
-const CreateTeste = (props) => {
-
-  
- 
+const Modalcomponent = (props) => {
   //Create some testing to see new code
-  const {pessoas, loading} = props;
+  const {pessoas} = props;
   //let subtitle;  
-  
+  console.log( 'passou aqui' , pessoas)
+
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
@@ -44,7 +42,7 @@ const CreateTeste = (props) => {
    return(<>
            
            <button onClick={openModal} >Url</button>
-        {loading ?  <h1>loading ...</h1> :
+        
              
             <div>
             <Modal
@@ -52,36 +50,36 @@ const CreateTeste = (props) => {
             onRequestClose={closeModal}
             contentLabel="Example Modal"
             style={customStyles}
-            >
-      
-              <div>
-              <h2 >Pessoa</h2>
-              <h2 >Nome</h2>
-              <h2 >Email-test</h2>
-              <h2 >numero</h2>
-           
-              </div>
-
-              {pessoas && pessoas.map((results) => {
-                return(<> <div className='container' >
-                  <table>
-                    <tbody>
-                      <tr key={results}>
-                        <td>{results.name}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                        
-                  </div> </> )
-              })}
-            
+            >  
+             <h1> addd</h1>
+                  {  pessoas && pessoas.map((results)=>{
+                    return(<>
+                  <table className="table">
+                 <tbody> 
+                 <tr className='table-light'  key={results}>
+                 <th scope="row"> <img id='image-size'src={results.picture.thumbnail} alt='pictureusers' />
+                 </th>
+                 <h4>{ `${results.name.first} ${results.name.last}` } </h4>
+                 <h4>{results.email} </h4>
+                 <h4>{results.gender}</h4>
+                 <h4><Convert timezone={results.dob.date} /> </h4>
+                 <h4>{results.cell}</h4>
+                 <h4> {results.location.city} </h4>
+                 <h4>{results.nat} </h4>
+                 <h4> {results.id.name} </h4>            
+                </tr>  
+               </tbody>
+               </table>
+                    
+                    
+                    </>)
+                  })  }
+             
+               
          
             </Modal>
             </div>             
- 
-        
-        }
     </>)
 }
 
-export default CreateTeste
+export default Modalcomponent
