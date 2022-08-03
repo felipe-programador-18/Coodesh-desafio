@@ -25,6 +25,7 @@ function App() {
     setfound(false)
     const data = await LimitSearch(ItensPorPage, ItensPorPage*page)
     setpessoa(data.results)
+    console.log(data)
     setloading(false)
     setTotalPage(Math.ceil(data.results / ItensPorPage))
      
