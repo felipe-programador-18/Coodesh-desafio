@@ -51,9 +51,9 @@ const Modalcomponent = (props) => {
             contentLabel="Example Modal"
             style={customStyles}
             >  
-             <h1> addd</h1>
+             <h1> Dados</h1>
                   {  pessoas && pessoas.map((results)=>{
-                    return(<>
+                    return(<> <div className='text-center' >
                   <table className="table">
                  <tbody> 
                  <tr className='table-light'  key={results}>
@@ -72,7 +72,7 @@ const Modalcomponent = (props) => {
                </table>
                     
                     
-                    </>)
+                  </div>  </>)
                   })  }
              
                
